@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Header from '../components/Header'
-
+import {Row, Col, Card} from 'react-bootstrap'
 import styles from '../styles/Home.module.css'
 import argentmag from '../images/argentmag.png'
 import bankbank from '../images/bankbank.png'
@@ -46,7 +46,7 @@ export default function Home() {
     },
     {
       url: '',
-      image: 'bankbank',
+      image: 'findcurrency',
       name: 'FindCurrency',
       date: 1
     },
@@ -95,7 +95,7 @@ export default function Home() {
     {
       url: '',
       image: 'nubapp',
-      name: 'Nubdapp',
+      name: 'Nubapp',
       date: 3
     },
     {
@@ -168,15 +168,21 @@ export default function Home() {
 
 
     return (
-      <div key={index} style={{display: 'flex'}}>
-        <div>
-        <a href={item.url} target="_blank" rel="noreferrer"><Image src={getImage()} width={150} height={150}/></a>
-        </div>
-        <div style={{marginLeft: 40}}>
-          <h2>{item.name}</h2>
-          <a href={item.url} target="_blank" rel="noreferrer"><h5 style={{fontWeight: 300, marginTop: -10}}>{item.url}</h5></a>
-        </div>
-      </div>
+      <Col sm={4}>
+        <Card style={{padding: 10, marginBottom : 10}}>
+          <div  key={index} style={{display: 'flex'}}>
+            <div style={{border: '1px solid grey', padding: 0, borderRadius: 6}}>
+              <div style={{marginBottom: -6}}>
+            <a href={item.url} target="_blank" rel="noreferrer" ><Image src={getImage()} width={150} height={150} style={{borderRadius: 5}}/></a>
+            </div>
+            </div>
+            <div style={{marginLeft: 20, marginTop: 40}}>
+              <h4>{item.name}</h4>
+              <a href={item.url} target="_blank" rel="noreferrer"><h5 style={{fontWeight: 300, fontSize: 16}}>{item.url}</h5></a>
+            </div>
+          </div>
+        </Card>
+      </Col>
     )
   }
   return (
@@ -187,7 +193,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header/>
+  <Row>
+
      {data.sort((a,b) => b.date - a.date).map(renderProject)}
+     </Row>
 
       <footer className={styles.footer}>
   
