@@ -168,21 +168,25 @@ export default function Home() {
 
 
     return (
-      <Col sm={4}>
-        <Card style={{marginBottom : 10, height: 150}}>
+      <>
+      <Col sm={4} style={{minWidth: 380}}>
+        <Card style={{marginBottom : 10, height: 102}}>
           <div  key={index} style={{display: 'flex'}}>
-            <div style={{borderRight: '1px solid grey', padding: 0, borderRadius: 6, width: 150}}>
-         
-                <a href={item.url} target="_blank" rel="noreferrer" style={{width: 150}} ><Image src={getImage()} layout="responsive" style={{borderRadius: 5, width: 149}}/></a>
-       
+            <div style={{borderRight: '0px solid grey', borderRadius: 6, borderRadiusTopRight: 0, maxWidth: 150, minWidth: 100, display: 'block', height: 93}}>
+              <div style={{marginBottom: -10}}>
+                <a href={item.url} target="_blank" rel="noreferrer" style={{width: 150, height: 140}} >
+                  <Image src={getImage()} layout="responsive" style={{borderRadius: 5, width: 149}}/>
+                  </a>
+                  </div>
             </div>
-            <div style={{marginLeft: 20, marginTop: 40}}>
+            <div style={{marginLeft: 20, marginTop: 20}}>
               <h4>{item.name}</h4>
               <a href={item.url} target="_blank" rel="noreferrer"><h5 style={{fontWeight: 300, fontSize: 16}}>{item.url}</h5></a>
             </div>
           </div>
         </Card>
       </Col>
+      </>
     )
   }
   return (
