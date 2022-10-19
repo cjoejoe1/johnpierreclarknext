@@ -1,68 +1,196 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Header from '../components/Header'
+
 import styles from '../styles/Home.module.css'
+import argentmag from '../images/argentmag.png'
+import bankbank from '../images/bankbank.png'
+import classement from '../images/classement.png'
+import crispyfish from '../images/crispyfish.png'
+import findcurrency from '../images/findcurrency.png'
+import focusfrance from '../images/focusfrance.png'
+import helloiceland from '../images/helloiceland.png'
+import hellopret from '../images/hellopret.png'
+import johnthedog from '../images/johnthedog.png'
+import kohdao from '../images/kohdao.png'
+import madshipping from '../images/madshipping.png'
+import nubapp from '../images/nubapp.png'
+import propertaz from '../images/propertaz.png'
+import sockbuzz from '../images/sockbuzz.png'
+import startupmag from '../images/startupmag.png'
+import stimply from '../images/stimply.png'
+import unicornalert from '../images/unicornalert.png'
+import vctracker from '../images/vctracker.png'
+import founderalert from '../images/founderalert.png'
 
 export default function Home() {
+
+  const data = [
+    {
+      url: '',
+      image: 'argentmag',
+      name: 'ArgentMag',
+      date: 5
+    },
+    {
+      url: 'https://www.classement.com/',
+      image: 'classement',
+      name: 'Classement',
+      date: 13
+    },
+    {
+      url: '',
+      image: 'crispyfish',
+      name: 'Crisfy.Fish',
+      date: 12
+    },
+    {
+      url: '',
+      image: 'bankbank',
+      name: 'FindCurrency',
+      date: 1
+    },
+    {
+      url: '',
+      image: 'focusfrance',
+      name: 'FocusFrance',
+      date: 2
+    },
+    {
+      url: 'https://www.helloiceland.is/',
+      image: 'helloiceland',
+      name: 'HelloIceland',
+      date: 9
+    },
+    {
+      url: 'https://www.hellopret.fr/',
+      image: 'hellopret',
+      name: 'HelloPrêt',
+      date: 6
+    },
+    {
+      url: '',
+      image: 'johnthedog',
+      name: 'JohnTheDog',
+      date: 7
+    },
+    {
+      url: 'https://www.bankbank.fr/',
+      image: 'bankbank',
+      name: 'BankBank',
+      date: 18
+    },
+    {
+      url: 'https://www.kohdao.com',
+      image: 'kohdao',
+      name: 'Kohdao',
+      date: 10
+    },
+    {
+      url: '',
+      image: 'madshipping',
+      name: 'MadShipping',
+      date: 11
+    },
+    {
+      url: '',
+      image: 'nubapp',
+      name: 'Nubdapp',
+      date: 3
+    },
+    {
+      url: '',
+      image: 'propertaz',
+      name: 'Propertaz',
+      date: 4
+    },
+    {
+      url: '',
+      image: 'sockbuzz',
+      name: 'SockBuzz',
+      date: 8
+    },
+    {
+      url: 'https://www.startupmag.co.uk',
+      image: 'startupmag',
+      name: 'StartupMag',
+      date: 20
+    },
+    {
+      url: 'https://www.stimply.com/',
+      image: 'stimply',
+      name: 'Stimply',
+      date: 19
+    },
+    {
+      url: 'https://www.unicornalert.io',
+      image: 'unicornalert',
+      name: 'UnicornAlert',
+      date: 15
+    },
+    {
+      url: 'https://vctracker.co.uk/',
+      image: 'vctracker',
+      name: 'VCTracker',
+      date: 17
+    },
+    {
+      url: 'https://www.founderalert.com/',
+      image: 'founderalert',
+      name: 'FounderAlert',
+      date: 20
+    },
+  ]
+
+  const renderProject = (item, index) => {
+
+    const getImage = () => {
+      if(item.image === 'argentmag') return argentmag
+      if(item.image === 'bankbank') return bankbank
+      if(item.image === 'classement') return classement
+      if(item.image === 'crispyfish') return crispyfish
+      if(item.image === 'findcurrency') return findcurrency
+      if(item.image === 'focusfrance') return focusfrance
+      if(item.image === 'helloiceland') return helloiceland
+      if(item.image === 'hellopret') return hellopret
+      if(item.image === 'johnthedog') return johnthedog
+      if(item.image === 'kohdao') return kohdao
+      if(item.image === 'madshipping') return madshipping
+      if(item.image === 'nubapp') return nubapp
+      if(item.image === 'propertaz') return propertaz
+      if(item.image === 'sockbuzz') return sockbuzz
+      if(item.image === 'startupmag') return startupmag
+      if(item.image === 'stimply') return stimply
+      if(item.image === 'unicornalert') return unicornalert
+      if(item.image === 'vctracker') return vctracker
+      if(item.image === 'founderalert') return founderalert
+    }
+
+
+    return (
+      <div key={index} style={{display: 'flex'}}>
+        <div>
+        <a href={item.url} target="_blank" rel="noreferrer"><Image src={getImage()} width={150} height={150}/></a>
+        </div>
+        <div style={{marginLeft: 40}}>
+          <h2>{item.name}</h2>
+          <a href={item.url} target="_blank" rel="noreferrer"><h5 style={{fontWeight: 300, marginTop: -10}}>{item.url}</h5></a>
+        </div>
+      </div>
+    )
+  }
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
-        <meta name="description" content="Generated by create next app" />
+        <title>John-Pierre Clark</title>
+        <meta name="description" content="Current and past projects" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+      <Header/>
+     {data.sort((a,b) => b.date - a.date).map(renderProject)}
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+  
       </footer>
     </div>
   )
