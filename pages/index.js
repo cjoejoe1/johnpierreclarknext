@@ -321,7 +321,7 @@ export default function Home() {
               {item.role ? <p style={{fontSize: 14, fontWeight: 300}}><span style={{fontWeight: 700}}>Role:</span> {item.role}</p> : null }
               {item.stack ? <p style={{fontSize: 14, fontWeight: 300, marginTop: -15}}><span style={{fontWeight: 700}}>Stack:</span> {item.stack}</p> : null }
               {item.marketing ? <p style={{fontSize: 14, fontWeight: 300, marginTop: -15}}><span style={{fontWeight: 700}}>Marketing:</span> {item.marketing}</p> : null}
-              <a href={item.url} target="_blank" rel="noreferrer"><h5 style={{fontWeight: 300, fontSize: 16}}>{item.url.split('//')[1]}</h5></a>
+              <a href={item.url} target="_blank" rel="noreferrer"><h5 style={{fontWeight: 300, fontSize: 16}}>{item.url.replace('com/', 'com').replace('fr/', 'fr').replace('eu/', 'eu').replace('uk/', 'uk').split('//')[1]}</h5></a>
             </div>
           </div>
         </Card>
