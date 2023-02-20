@@ -40,7 +40,8 @@ export default function Home() {
       what: 'Financial comparison website (personal loans, mortgages, insurance). French version of Moneysupermarket',
       role: 'Founder',
       status: 'exit',
-      date: 5
+      color: '#cc0b0b',
+      date: 19
     },
     {
       url: '',
@@ -62,7 +63,8 @@ export default function Home() {
       role: 'Founder',
       what: 'Currency transfer specialist',
       status: 'exit',
-      date: 1
+      color: '#6ddb8d',
+      date: 18
     },
     {
       url: '',
@@ -76,6 +78,7 @@ export default function Home() {
       image: 'helloiceland',
       name: 'Hello Iceland',
       status: 'client',
+      color: '#000000',
       date: 9
     },
     {
@@ -85,7 +88,8 @@ export default function Home() {
       status: 'exit',
       what: 'Digital mortgage broker',
       role: 'Co-founder',
-      date: 6
+      color: '#ff0064',
+      date: 20
     },
     {
       url: '',
@@ -114,6 +118,7 @@ export default function Home() {
       image: 'madshipping',
       name: 'madshipping',
       status: 'previous',
+      color: '#f3004e',
       date: 11
     },
     {
@@ -121,6 +126,7 @@ export default function Home() {
       image: 'nubapp',
       name: 'nubapp',
       status: 'previous',
+      color: '#1e1e1e',
       date: 3
     },
     {
@@ -182,6 +188,7 @@ export default function Home() {
       image: 'vctracker',
       name: 'vctracker',
       status: 'previous',
+      color: '#0f284d',
       date: 14
     },
     {
@@ -200,6 +207,7 @@ export default function Home() {
       image: 'ukimmigration',
       name: 'UK immigration consulting',
       status: 'client',
+      color: '#0f202f',
       date: 20
     },
     {
@@ -207,6 +215,7 @@ export default function Home() {
       image: 'alicosta',
       name: 'alicosta',
       status: 'client',
+      color: '#12236b',
       date: 14
     },
     {
@@ -214,6 +223,7 @@ export default function Home() {
       image: 'definingdetail',
       name: 'defining detail',
       status: 'client',
+      color: '#000000',
       date: 13
     },
     {
