@@ -29,6 +29,7 @@ import laperlaazul from '../images/laperlaazul.png'
 import maufay from '../images/maufay.png'
 import ukimmigration from '../images/ukimmigration.png'
 import universal from '../images/universal.png'
+import arsender from '../images/arsender.png'
 
 export default function Home() {
 
@@ -47,6 +48,7 @@ export default function Home() {
       url: '',
       image: 'classement',
       name: 'classement',
+      status: 'current',
       date: 13
     },
     {
@@ -72,6 +74,15 @@ export default function Home() {
       name: 'focusfrance',
       status: 'previous',
       date: 2
+    },
+    {
+      url: 'https://www.arsender.com',
+      image: 'arsender',
+      name: 'arsender',
+      status: 'current',
+      role: 'creator, developer',
+      stack: '3JS, @react-three, Next JS, Firebase, Netlify', 
+      date: 16
     },
     {
       url: 'https://www.helloiceland.is/',
@@ -104,6 +115,9 @@ export default function Home() {
       name: 'bankbank',
       color: '#f10157',
       status: 'current',
+      role: 'creator, developer, marketing',
+      stack: 'Gatsby, Firebase, Netlify', 
+      marketing: 'Google Ads, Affiliate marketing',
       date: 15
     },
     {
@@ -111,6 +125,7 @@ export default function Home() {
       image: 'kohdao',
       name: 'kohdao',
       status: 'current',
+      color: '#1342a2',
       date: 10
     },
     {
@@ -173,6 +188,8 @@ export default function Home() {
       name: 'stimply',
       color: '#000000',
       status: 'current',
+      role: 'creator, developer',
+      stack: 'Gatsby, Firebase, Netlify', 
       date: 16
     },
     {
@@ -181,7 +198,7 @@ export default function Home() {
       name: 'unicornalert',
       color: '#ff31ff',
       status: 'current',
-      date: 17
+      date: 15
     },
     {
       url: 'https://vctracker.co.uk/',
@@ -278,6 +295,7 @@ export default function Home() {
       if(item.image === 'maufay') return maufay
       if(item.image === 'ukimmigration') return ukimmigration
       if(item.image === 'universal') return universal
+      if(item.image === 'arsender') return arsender
  
     }
 
