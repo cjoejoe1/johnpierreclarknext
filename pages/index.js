@@ -45,9 +45,10 @@ export default function Home() {
       date: 19
     },
     {
-      url: '',
+      url: 'https://www.classement.com/',
       image: 'classement',
       name: 'classement',
+      role: 'Founder',
       status: 'current',
       date: 13
     },
@@ -164,7 +165,7 @@ export default function Home() {
       name: 'startupmag',
       color:'#4532ea',
       what: 'Startupmag helps founders connect with investors with interviews, articles and a premium acccess to a UK venture capital database.',
-      role: 'creator, developer, interviewer',
+      role: 'founder, developer',
       stack: 'Next JS, Firebase, Puppeteer, Twitter API, Stripe',
       marketing: 'SEO, SEMRush',
       status: 'current',
@@ -175,7 +176,7 @@ export default function Home() {
       image: 'createur',
       name: 'createur.com',
       what: 'Createur.com is a community for French creators. The website offers a free daily newsletter with 1 idea/day and a paid member vault with unlimited access.',
-      role: 'creator, developer, content',
+      role: 'founder, developer',
       stack: 'Next JS, Firebase, Convertkit API, Stripe',
       marketing: 'Google Ads, Facebook Ads',
       color: '#e5234f',
@@ -212,7 +213,7 @@ export default function Home() {
       url: 'https://www.founderalert.com/',
       image: 'founderalert',
       name: 'founderalert',
-      role: 'creator, developer',
+      role: 'founder, developer',
       stack: 'Next JS, Firebase, Google API',
       marketing: 'Product Hunt',
       what: 'As soon as a founder raises funds, we collect all of their contact details and we give you that information in your dashboard. You can then connect and start networking before it’s too late!',
